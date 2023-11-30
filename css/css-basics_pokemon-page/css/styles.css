@@ -4,12 +4,16 @@
 
 /* Task 1: First of all we want to adjust how the size of our elements is calculated when working with CSS. Do you know how to switch from "content-box" to "border-box"? */
 
-/* your solution */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 /* Task 2: Let's work on some basic stylings that we want to apply to all elements of your code via inheritance. Which selector do we need for this? */
 
 /* add selector */
- {
+* {
   font-family: monospace;
   font-size: 1rem;
   line-height: 1.5;
