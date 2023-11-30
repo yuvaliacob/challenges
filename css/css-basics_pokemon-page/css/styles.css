@@ -6,8 +6,6 @@
 
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
 /* Task 2: Let's work on some basic stylings that we want to apply to all elements of your code via inheritance. Which selector do we need for this? */
@@ -75,7 +73,14 @@ section:nth-child(4) {
 */
 
 .subtitle {
-  /* your solution */
+  border-left: 3px solid gold;
+  border-right: 3px solid gold;
+  padding: 0px 10px;
+  display: inline;
+}
+
+#fav {
+  border-color: orange;
 }
 
 /* ------- List ------- */
