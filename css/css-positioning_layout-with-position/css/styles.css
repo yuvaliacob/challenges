@@ -22,6 +22,10 @@ body {
   height: 80px;
   box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
   padding: 10px;
+  top: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
 }
 
 .header__text {
