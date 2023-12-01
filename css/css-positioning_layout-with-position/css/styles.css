@@ -60,6 +60,9 @@ body {
   padding: 3% 10%;
   scroll-margin-top: 100px;
   border-radius: 2rem;
+
+  position: relative;
+  z-index: -1;
 }
 
 .card__heading {
@@ -75,6 +78,9 @@ body {
   padding: 6px 12px;
   border-radius: 50%;
   box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 /**
