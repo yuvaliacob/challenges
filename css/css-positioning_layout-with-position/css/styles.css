@@ -45,6 +45,9 @@ body {
   background: #140523;
   color: #ffffff;
   height: 48px;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
 }
 
 /**
