@@ -113,11 +113,22 @@ h1 {
   }
 }
 
+/* Solution Part 4 */
+
 .box--four {
   background-color: lightgray;
 
   width: 100px;
   height: 100px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .box--four {
+    background-color: midnightblue;
+
+    width: 100px;
+    height: 100px;
+  }
 }
 
 .box--five {
