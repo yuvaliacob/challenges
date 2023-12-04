@@ -52,8 +52,18 @@
             there's some material in there.
           </p>
           <div class="box box--five">
-            <!-- Perhaps you may want to use the <picture> Element here? -->
-            <img src="./img/cat_small.jpg" alt="A cat" />
+            <!-- Solution for kitty bonus -->
+            <picture>
+              <source
+                media="(min-width: 1199px)"
+                srcset="./img/cat_large.jpg"
+              />
+              <source
+                media="(min-width: 599px)"
+                srcset="./img/cat_medium.jpg"
+              />
+              <img src="./img/cat_small.jpg" alt="A cat" />
+            </picture>
           </div>
         </section>
       </section>

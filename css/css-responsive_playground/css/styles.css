@@ -59,12 +59,16 @@ h1 {
   margin: auto;
 }
 
+/* Solution Part 1 */
+
 .box--one {
   background-color: lightblue;
 
-  width: 100px;
+  width: 50%;
   height: 100px;
 }
+
+/* Solution Part 2 */
 
 .box--two {
   background-color: lightgreen;
@@ -73,6 +77,26 @@ h1 {
   height: 100px;
 }
 
+@media (min-width: 599px) {
+  .box--two {
+    background-color: lightgreen;
+
+    width: 200px;
+    height: 100px;
+  }
+}
+
+@media (min-width: 1199px) {
+  .box--two {
+    background-color: lightgreen;
+
+    width: 400px;
+    height: 100px;
+  }
+}
+
+/* Solution Part 3 */
+
 .box--three {
   background-color: lightpink;
 
@@ -80,11 +104,31 @@ h1 {
   height: 250px;
 }
 
+@media (orientation: landscape) {
+  .box--three {
+    background-color: lightpink;
+
+    width: 250px;
+    height: 50px;
+  }
+}
+
+/* Solution Part 4 */
+
 .box--four {
   background-color: lightgray;
 
   width: 100px;
   height: 100px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .box--four {
+    background-color: midnightblue;
+
+    width: 100px;
+    height: 100px;
+  }
 }
 
 .box--five {
@@ -94,3 +138,5 @@ h1 {
 .box--five img {
   width: 100%;
 }
+
+/* Solution for bonus inside HTML */
