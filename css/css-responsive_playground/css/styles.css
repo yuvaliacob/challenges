@@ -59,6 +59,8 @@ h1 {
   margin: auto;
 }
 
+/* Solution Part 1 */
+
 .box--one {
   background-color: lightblue;
 
@@ -66,11 +68,31 @@ h1 {
   height: 100px;
 }
 
+/* Solution Part 2 */
+
 .box--two {
   background-color: lightgreen;
 
   width: 100px;
   height: 100px;
+}
+
+@media (min-width: 599px) {
+  .box--two {
+    background-color: lightgreen;
+
+    width: 200px;
+    height: 100px;
+  }
+}
+
+@media (min-width: 1199px) {
+  .box--two {
+    background-color: lightgreen;
+
+    width: 400px;
+    height: 100px;
+  }
 }
 
 .box--three {
