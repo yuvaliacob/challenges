@@ -158,6 +158,7 @@ fairly essential to completing this challenge. */
 
 .product-card {
   display: flex;
+
   justify-content: center;
   align-items: center;
   width: 70%;
@@ -244,10 +245,44 @@ width, etc. */
 
 /* Media Query Tablet */
 /* --- */
-/* Replace this comment with your media query. */
+@media (min-width: 900px) {
+  .card-section {
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+
+  .card-section > * {
+    width: 45%;
+  }
+
+  .intro-text {
+    align-self: flex-start;
+  }
+}
 /* --- */
 
 /* Media Query Desktop */
 /* --- */
-/* Replace this comment with your media query. */
+@media (min-width: 1200px) {
+  body,
+  .main-header,
+  .navbar {
+    width: 1000px;
+    margin: 0 auto;
+  }
+
+  .card-section {
+    overflow-x: hidden;
+    padding-bottom: 50px;
+  }
+
+  .product-card.--forest {
+    width: 100vw;
+    height: 500px;
+  }
+
+  .main-content {
+    padding: 0;
+  }
+}
 /* --- */
