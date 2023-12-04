@@ -95,11 +95,22 @@ h1 {
   }
 }
 
+/* Solution Part 3 */
+
 .box--three {
   background-color: lightpink;
 
   width: 50px;
   height: 250px;
+}
+
+@media (orientation: landscape) {
+  .box--three {
+    background-color: lightpink;
+
+    width: 250px;
+    height: 50px;
+  }
 }
 
 .box--four {
