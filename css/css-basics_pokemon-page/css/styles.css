@@ -4,12 +4,13 @@
 
 /* Task 1: First of all we want to adjust how the size of our elements is calculated when working with CSS. Do you know how to switch from "content-box" to "border-box"? */
 
-/* your solution */
+* {
+  box-sizing: border-box;
+}
 
 /* Task 2: Let's work on some basic stylings that we want to apply to all elements of your code via inheritance. Which selector do we need for this? */
 
-/* add selector */
- {
+* {
   font-family: monospace;
   font-size: 1rem;
   line-height: 1.5;
@@ -20,7 +21,10 @@
 
 /* Task 3: To set the line height to 1.5 is good for texts, because of accessibility concerns, but for the headings it seems too much. Let's change this by giving our headings a line height of 1.2: */
 
-/* your solution */
+h1,
+h2 {
+  line-height: 1.2;
+}
 
 /* Task 4: Now we want to give our h1 element more styles to shine! Add the following styles by writing the correct declarations inside of the declaration block of the next CSS rule:
 
@@ -31,7 +35,10 @@
 */
 
 .title {
-  /* your solution */
+  background-color: white;
+  margin-top: 0;
+  padding: 10px;
+  text-align: center;
 }
 
 /* ------- Sections ------- */
@@ -45,7 +52,14 @@
 */
 
 section {
-  /* your solution */
+  background-color: white;
+  padding: 20px;
+  margin: 10px;
+  border-left: solid 5px orange;
+}
+
+section:nth-child(4) {
+  border-left: solid 5px gold;
 }
 
 /* ------- Headings Part 2 ------- */
@@ -59,22 +73,27 @@ section {
 */
 
 .subtitle {
-  /* your solution */
+  border-left: 3px solid gold;
+  border-right: 3px solid gold;
+  padding: 0px 10px;
+  display: inline;
+}
+
+#fav {
+  border-color: orange;
 }
 
 /* ------- List ------- */
 
 /* Task 7: Last but not least! We want to style our list with our favorite Pokémon. Which selector do we need? And also add values for the padding. */
 
-/* add selector */
- {
+ul {
   list-style: "🧡";
-  padding-left: /* add value */ ;
+  padding-left: 25px;
 }
 
-/* add selector */
- {
-  padding-left: /* add value */ ;
+li {
+  padding-left: 5px;
 }
 
 /* ------- The End -------- */
