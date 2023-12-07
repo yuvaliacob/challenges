@@ -15,7 +15,9 @@ const totalSavings = startingBalance + monthlyContribution * months;
 const euroSymbol = "€";
 
 console.log(
-  "After 12 months of saving, you will have",
+  "After",
+  months,
+  "months of saving, you will have",
   euroSymbol + totalSavings,
   "in your account."
 );
