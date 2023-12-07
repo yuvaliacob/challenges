@@ -7,9 +7,9 @@ let mealCost = 50;
 let tipPercentage = 0.1;
 
 // Tip calculation
-let tipAmount = mealCost * tipPercentage;
+const tipAmount = mealCost * tipPercentage;
 
 // Total meal cost
-let totalCost = mealCost + tipAmount;
+const totalCost = mealCost + tipAmount;
 
 console.log("// The total cost of your bill is:", totalCost, "euros");
