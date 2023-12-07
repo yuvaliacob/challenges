@@ -9,14 +9,31 @@ console.clear();
 	- a boolean called isReported
 */
 
-// --v-- write your code here --v--
+const postTitle = "Started JavaScript today!";
 
-// --^-- write your code here --^--
+const postText =
+  "Today we started learning JavaScript in class. This is fascinating to all of the no one who will see this post on my non-existent social media accounts.";
+
+let sumLikes = 742;
+
+const userName = "Yuval";
+
+const isReported = false;
 
 /*
 2. Log all variables to the console. Increase the likes by one and log the amount of likes again. Adapt your code from 1.1 if necessary.
 */
 
-// --v-- write your code here --v--
+console.log("Title: ", postTitle);
 
-// --^-- write your code here --^--
+console.log("Text:", postText);
+
+console.log("Likes:", sumLikes);
+
+console.log("Name:", userName);
+
+console.log("Reported?", isReported);
+
+sumLikes += 1;
+
+console.log("1 like added:", sumLikes);
