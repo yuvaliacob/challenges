@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Personal Profile Form</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <section>
+      <form>
+        <p>
+          We want to get to know you! Please enter your personal information.
+        </p>
+
+        <fieldset>
+          <legend>Personal Information</legend>
+
+          <label for="firstname">First Name:</label>
+          <input type="text" name="firstname" id="firstname" required />
+
+          <label for="lastname">Last Name:</label>
+          <input type="text" name="lastname" id="lastname" required />
+
+          <label for="birthday">Your Birthday:</label>
+          <input type="date" name="birthday" id="birthday" required />
+        </fieldset>
+
+        <p>
+          That's good but we're gonna need more if we're going to make any money
+          selling your data and possibly steal or identity. Can you tell us a
+          bit more?
+        </p>
+
+        <fieldset>
+          <legend>Further Information</legend>
+
+          <label for="color">Favorite Color:</label>
+          <input
+            type="color"
+            name="color"
+            id="color"
+            value="#3f0097"
+            required
+          />
+
+          <label for="pet">What's your favorite pet?</label>
+          <select name="pet" id="pet" required>
+            <option value="" disabled selected>
+              --Please choose an option--
+            </option>
+            <option value="dog">Dog</option>
+            <option value="llama">Llama</option>
+            <option value="red_panda">Red Panda</option>
+            <option value="spotted_owl">Spotted Owl</option>
+            <option value="house_elf">House Elf</option>
+          </select>
+        </fieldset>
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </body>
+</html>
