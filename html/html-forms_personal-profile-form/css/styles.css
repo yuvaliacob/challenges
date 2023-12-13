@@ -36,7 +36,6 @@ fieldset {
 
 input[type="color"] {
   margin: auto;
-  color: var(--primary);
 }
 
 legend {
