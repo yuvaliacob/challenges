@@ -1,7 +1,7 @@
 {
-  "name": "js-functions_pizza-analyzer",
+  "name": "js-inputs-and-strings_input-to-upper-and-lowercase",
   "version": "0.0.0-unreleased",
-  "description": "js-functions: pizza-analyzer",
+  "description": "Static HTML template with CSS and JS",
   "main": "index.html",
   "scripts": {
     "lint": "npx -y eslint@latest .",
