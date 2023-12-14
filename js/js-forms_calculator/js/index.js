@@ -26,6 +26,18 @@ form.addEventListener("submit", (event) => {
 
   // --v-- write your code here --v--
 
+  const formData = new FormData(event.target);
+  const data = Object.fromEntries(formData);
+
+  const numberA = Number(data.numberA);
+  const numberB = Number(data.numberB);
+
+  console.log(numberA + numberB);
+
+  result.textContent = add();
+
+  // event.target.reset();
+
   // --^-- write your code here --^--
 
   resultOutput.textContent = result;
