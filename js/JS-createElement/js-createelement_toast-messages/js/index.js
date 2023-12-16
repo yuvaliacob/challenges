@@ -8,7 +8,7 @@ addButton.addEventListener("click", () => {
   // Exercise: Append a new entry to the toast messages container
 
   // Generate new <li></li> element
-  let newToastEntry = document.createElement("li");
+  const newToastEntry = document.createElement("li");
 
   // Insert text into new element: <li>"I am a new entry."</li>
   newToastEntry.textContent = "I am a new entry.";
