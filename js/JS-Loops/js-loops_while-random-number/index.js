@@ -11,7 +11,7 @@ while (number <= 0.9) {
   console.log(number);
   number = Math.random();
   count++;
-}
+};
 
 // --^-- write/change code here --^--
 
