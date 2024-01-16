@@ -1,9 +1,9 @@
 import "./styles.css";
 
 export default function App() {
-  return <Greeting name="Donna" />;
+  return <Greeting name="Mary" />;
 }
 
 function Greeting({ name }) {
-  return <h1>Hello, {name}!</h1>;
+  return <h1>{name === "Mary" ? "Hello, coach!" : `Hello, ${name}`}</h1>;
 }
