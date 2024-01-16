@@ -2,16 +2,23 @@ import React from "react";
 import "./styles.css";
 
 export default function App() {
-  return <Button color="red" disabled={false} text="CLICK ME" />;
+  function handleClick() {
+    console.log("Ouch! Don't do that!");
+  }
+
+  return (
+    <Button
+      color="red"
+      disabled={false}
+      text="CLICK ME"
+      onClick={handleClick}
+    />
+  );
 }
 
-function Button({ color, disabled, text }) {
+function Button({ color, disabled, text, onClick }) {
   return (
-    <button
-      onClick={() => console.log("Ouch! Don't do that!")}
-      style={{ color: color }}
-      disabled={disabled}
-    >
+    <button onClick={onClick} style={{ color: color }} disabled={disabled}>
       {text}
     </button>
   );
