@@ -5,6 +5,7 @@
   gap: 10px;
   padding: 20px;
   border-left: 10px solid var(--color-nemo);
+  margin-bottom: 20px;
 }
 
 .card h2 {
