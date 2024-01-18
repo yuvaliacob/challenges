@@ -4,18 +4,18 @@ import "./styles.css";
 export default function App() {
   return (
     <main>
-      <Button />
-      <Button />
-      <Button />
-      <Button />
+      <button>Text</button>
+      <button>Text??</button>
+      <button>Whooo</button>
+      <button>Meow</button>
     </main>
   );
 }
 
-function Button() {
+function Button({ children }) {
   return (
     <button className="button" type="button">
-      Click me!
+      {children}
     </button>
   );
 }
