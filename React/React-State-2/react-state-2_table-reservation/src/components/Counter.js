@@ -1,7 +1,4 @@
-import { useState } from "react";
-
-export default function Counter() {
-  const [people, setPeople] = useState(0);
+export default function Counter({ onPeopleAdd, onPeopleSubtract }) {
   return (
     <>
       <h2>How many people would you like to visit us with?</h2>
@@ -10,7 +7,7 @@ export default function Counter() {
           type="button"
           className="counter__button"
           aria-label="increment people count"
-          onClick={() => setPeople(people + 1)}
+          onClick={onPeopleAdd}
         >
           +
         </button>
@@ -18,7 +15,7 @@ export default function Counter() {
           type="button"
           className="counter__button"
           aria-label="decrement people count"
-          onClick={() => setPeople(people - 1)}
+          onClick={onPeopleSubtract}
         >
           -
         </button>
