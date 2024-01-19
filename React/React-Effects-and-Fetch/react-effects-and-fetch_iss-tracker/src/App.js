@@ -19,11 +19,11 @@ export default function App() {
   }
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      getISSCoords();
-    }, 5000);
+    const intervalId = setInterval(getISSCoords, 5000);
 
-    return () => clearInterval(interval);
+    console.log("The interval ID is: ", intervalId);
+
+    return () => clearInterval(intervalId);
   }, []);
 
   return (
