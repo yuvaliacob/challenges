@@ -1,7 +1,17 @@
 import Link from "next/link";
+import { volumes } from "../../lib/data.js";
 import { introduction } from "../../lib/data";
+import { useRouter } from "next/router";
 
 export default function Volumes() {
+  const router = useRouter();
+
+  function getRandomElement(array) {
+    return array[Math.floor(Math.random() * array.length)];
+  }
+
+  const randomVolume = getRandomElement(volumes);
+
   return (
     <>
       <h1>The Lord of the Rings</h1>
@@ -21,6 +31,14 @@ export default function Volumes() {
           </Link>
         </li>
       </ul>
+
+      <button
+        onClick={() => {
+          router.push(`/volumes/${randomVolume.slug}`);
+        }}
+      >
+        Randome volume
+      </button>
     </>
   );
 }
