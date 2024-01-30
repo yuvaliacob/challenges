@@ -32,7 +32,7 @@ export default function ISSTracker() {
   if (error) return <div>failed to load</div>;
   if (isLoading) return <div>loading...</div>;
 
-  // const { name, height, eye_color, birth_year } = data;
+  const { longitude, latitude } = data;
 
   // const [coords, setCoords] = useState({
   //   longitude: 0,
@@ -63,10 +63,10 @@ export default function ISSTracker() {
 
   return (
     <main>
-      <Map longitude={coords.longitude} latitude={coords.latitude} />
+      <Map longitude={longitude} latitude={latitude} />
       <Controls
-        longitude={coords.longitude}
-        latitude={coords.latitude}
+        longitude={longitude}
+        latitude={latitude}
         // onRefresh={getISSCoords}
       />
     </main>
