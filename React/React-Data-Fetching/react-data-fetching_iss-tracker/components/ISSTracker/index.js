@@ -1,12 +1,9 @@
-// import { useEffect, useState } from "react";
 import Controls from "../Controls/index";
 import Map from "../Map/index";
 import useSWR from "swr";
 
-// const URL = "https://api.wheretheiss.at/v1/satellites/25544";
-
-const fetcher = async (URL) => {
-  const res = await fetch(URL);
+const fetcher = async (url) => {
+  const res = await fetch(url);
 
   // If the status code is not in the range 200-299,
   // we still try to parse and throw it.
@@ -22,45 +19,19 @@ const fetcher = async (URL) => {
 };
 
 export default function ISSTracker() {
-  const { data, error, isLoading } = useSWR(
+  const { data, error, isLoading, mutate } = useSWR(
     "https://api.wheretheiss.at/v1/satellites/25544",
     fetcher,
     { refreshInterval: 5000 }
   );
 
   console.log("Fetched data: ", data);
+  console.log("mutate function: ", mutate);
 
   if (error) return <div>failed to load</div>;
   if (isLoading) return <div>loading...</div>;
 
   const { longitude, latitude } = data;
-
-  // const [coords, setCoords] = useState({
-  //   longitude: 0,
-  //   latitude: 0,
-  // });
-
-  // async function getISSCoords() {
-  //   try {
-  //     const response = await fetch(URL);
-  //     if (response.ok) {
-  //       const data = await response.json();
-  //       setCoords({ longitude: data.longitude, latitude: data.latitude });
-  //     }
-  //   } catch (error) {
-  //     console.error(error);
-  //   }
-  // }
-
-  // useEffect(() => {
-  //   const timer = setInterval(() => {
-  //     getISSCoords();
-  //   }, 5000);
-
-  //   return () => {
-  //     clearInterval(timer);
-  //   };
-  // }, []);
 
   return (
     <main>
@@ -68,7 +39,7 @@ export default function ISSTracker() {
       <Controls
         longitude={longitude}
         latitude={latitude}
-        // onRefresh={getISSCoords}
+        onRefresh={() => mutate()}
       />
     </main>
   );
