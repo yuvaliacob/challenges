@@ -17,7 +17,7 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
-  min-width: 320px;
+  min-width: 200px;
   min-height: 100vh;
   background: linear-gradient(to bottom, var(--color-white), #36a6fc);
   color: var(--color-dark);
