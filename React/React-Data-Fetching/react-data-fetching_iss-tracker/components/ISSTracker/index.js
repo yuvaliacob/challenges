@@ -24,7 +24,8 @@ const fetcher = async (URL) => {
 export default function ISSTracker() {
   const { data, error, isLoading } = useSWR(
     "https://api.wheretheiss.at/v1/satellites/25544",
-    fetcher
+    fetcher,
+    { refreshInterval: 5000 }
   );
 
   console.log("Fetched data: ", data);
