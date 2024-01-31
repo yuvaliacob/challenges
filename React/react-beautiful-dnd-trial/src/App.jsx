@@ -1,13 +1,14 @@
 import { useState } from "react";
-import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
+import { DragDropContext, Droppable, Draggable } from "@hello-pangea/dnd";
+import "./App.css";
 
 const App = () => {
   const [listItems, setListItems] = useState([
-    { id: "1", content: "Drag and drop me" },
-    { id: "2", content: "Drag and drop me" },
-    { id: "3", content: "Drag and drop me" },
-    { id: "4", content: "Drag and drop me" },
-    { id: "5", content: "Drag and drop me" },
+    { id: "1", content: "1. Drag me drop me" },
+    { id: "2", content: "2. Drag me drop me" },
+    { id: "3", content: "3. Drag me drop me" },
+    { id: "4", content: "4. Drag me drop me" },
+    { id: "5", content: "5. Drag me drop me" },
   ]);
 
   const onDragEnd = (result) => {
@@ -40,7 +41,7 @@ const App = () => {
                 )}
               </Draggable>
             ))}
-            {provided.placeholder}
+            <div className="placeholder">{provided.placeholder}</div>
           </ul>
         )}
       </Droppable>
