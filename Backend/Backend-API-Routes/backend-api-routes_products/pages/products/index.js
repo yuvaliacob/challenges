@@ -14,23 +14,21 @@ export default function AllProducts() {
 
   //   console.log("What's in data:", data);
 
-  //   const { id, name, description, currency, category } = data;
-
   return (
     <>
       <h2>Products</h2>
       <ul>
-        {data.map((data) => (
-          <li key={data.id}>
+        {data.map(({ id, name, description, currency, category, price }) => (
+          <li key={id}>
             <h3>
-              {data.id}: <Link href={`/products/${data.id}`}>{data.name}</Link>
+              {id}: <Link href={`/products/${id}`}>{name}</Link>
             </h3>
             <ul>
-              <li> {data.category}</li>
-              <li>{data.description}</li>
+              <li> {category}</li>
+              <li>{description}</li>
               <li>
-                {data.price}
-                {data.currency}
+                {price}
+                {currency}
               </li>
             </ul>
             <br />
