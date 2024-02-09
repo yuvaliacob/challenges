@@ -1,7 +1,7 @@
 import useSWR from "swr";
 import Link from "next/link";
 
-export default function JokeList() {
+export default function AllProducts() {
   const { data, isLoading } = useSWR("/api/products");
 
   if (isLoading) {
@@ -23,7 +23,7 @@ export default function JokeList() {
         {data.map((data) => (
           <li key={data.id}>
             <h3>
-              {data.id}: {data.name}
+              {data.id}: <Link href={`/products/${data.id}`}>{data.name}</Link>
             </h3>
             <ul>
               <li> {data.category}</li>
@@ -39,8 +39,4 @@ export default function JokeList() {
       </ul>
     </>
   );
-}
-
-{
-  /* <Link href={`/${joke.id}`}>{joke.joke}</Link> */
 }
