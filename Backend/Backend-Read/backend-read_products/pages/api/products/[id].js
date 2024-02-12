@@ -6,7 +6,7 @@ export default async function handler(request, response) {
 
   const { id } = request.query;
 
-  const products = await Products.findById(id);
+  const products = await Product.findById(id);
 
   console.log(products);
 
