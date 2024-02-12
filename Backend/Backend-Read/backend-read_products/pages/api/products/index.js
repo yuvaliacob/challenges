@@ -5,7 +5,6 @@ export default async function handler(request, response) {
   await dbConnect();
 
   if (request.method === "GET") {
-    console.log("hello");
     try {
       const products = await Product.find();
 
