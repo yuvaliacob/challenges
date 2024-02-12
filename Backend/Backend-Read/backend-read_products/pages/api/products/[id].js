@@ -6,7 +6,9 @@ export default async function handler(request, response) {
 
   const { id } = request.query;
 
-  const products = await Product.findById(id);
+  // const products = await Product.findById(id);
+
+  const product = await Product.findById(id).populate("reviews");
 
   console.log(products);
 
