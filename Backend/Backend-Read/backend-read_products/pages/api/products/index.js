@@ -1,10 +1,11 @@
 import dbConnect from "@/db/connect";
-import Product from "@/components/Product";
+import Product from "../../../db/models/Product";
 
 export default async function handler(request, response) {
   await dbConnect();
 
   if (request.method === "GET") {
+    console.log("hello");
     try {
       const products = await Product.find();
 
