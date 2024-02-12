@@ -1,7 +1,6 @@
 import { StyledForm, StyledHeading, StyledLabel } from "./ProductForm.styled";
 import { StyledButton } from "../Button/Button.styled";
 import useSWR from "swr";
-// import { useRouter } from "next/router";
 
 export default function ProductForm() {
   const { mutate } = useSWR("/api/products");
@@ -21,7 +20,6 @@ export default function ProductForm() {
       body: JSON.stringify(productData),
     });
     if (response.ok) {
-      // Router.push("/test");
       mutate();
     }
   }
