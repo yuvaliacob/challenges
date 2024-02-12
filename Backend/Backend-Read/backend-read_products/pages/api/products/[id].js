@@ -8,7 +8,7 @@ export default async function handler(request, response) {
 
   // const products = await Product.findById(id);
 
-  const product = await Product.findById(id).populate("reviews");
+  const products = await Product.findById(id).populate("reviews");
 
   console.log(products);
 

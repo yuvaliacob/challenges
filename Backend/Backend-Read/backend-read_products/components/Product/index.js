@@ -24,6 +24,18 @@ export default function Product() {
       <p>
         Price: {data.price} {data.currency}
       </p>
+      <article>
+        <h4>Reviews</h4>
+        <h5>
+          <q>{data.reviews[0].title}</q>
+          <br />
+          <span>Rating: {data.reviews[0].rating}</span>
+        </h5>
+
+        <p>
+          <q>{data.reviews[0].text}</q>
+        </p>
+      </article>
       <StyledLink href="/">Back to all</StyledLink>
     </ProductCard>
   );
