@@ -30,6 +30,7 @@ export default function Product() {
 
     if (response.ok) {
       mutate();
+      setFormHeading("Add a new Fish"); // Reset the form heading after editing
     }
   }
 
@@ -77,7 +78,12 @@ export default function Product() {
           Delete
         </StyledButton>
 
-        {isEditMode && <ProductForm onSubmit={handleEditProduct} />}
+        {isEditMode && (
+          <ProductForm
+            onSubmit={handleEditProduct}
+            heading={"Edit Fish Details"}
+          />
+        )}
       </ProductCard>
     </>
   );
