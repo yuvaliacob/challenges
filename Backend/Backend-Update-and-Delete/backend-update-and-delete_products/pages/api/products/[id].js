@@ -26,4 +26,13 @@ export default async function handler(request, response) {
       response.status(500).json({ error: "Failed to update the product." });
     }
   }
+
+  if (request.method === "DELETE") {
+    await Product.findByIdAndDelete(id);
+    // Declare productToDelete to be the product identified by its id and delete it.
+    // This line handles the entire deletion process.
+    response
+      .status(200)
+      .json({ status: `Product ${id} successfully deleted.` });
+  }
 }

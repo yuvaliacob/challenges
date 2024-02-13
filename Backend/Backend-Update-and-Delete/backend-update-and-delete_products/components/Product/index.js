@@ -3,8 +3,13 @@ import { useRouter } from "next/router";
 import { ProductCard } from "./Product.styled";
 import { StyledLink } from "../Link/Link.styled";
 import Comments from "../Comments";
+import { useState } from "react";
+import { StyledButton } from "../Button/Button.styled";
+import ProductForm from "../ProductForm";
 
 export default function Product() {
+  const [isEditMode, setIsEditMode] = useState(false);
+
   const router = useRouter();
   const { id } = router.query;
 
@@ -37,14 +42,29 @@ export default function Product() {
   }
 
   return (
-    <ProductCard>
-      <h2>{data.name}</h2>
-      <p>Description: {data.description}</p>
-      <p>
-        Price: {data.price} {data.currency}
-      </p>
-      {data.reviews.length > 0 && <Comments reviews={data.reviews} />}
-      <StyledLink href="/">Back to all</StyledLink>
-    </ProductCard>
+    <>
+      <ProductCard>
+        <h2>{data.name}</h2>
+        <p>Description: {data.description}</p>
+        <p>
+          Price: {data.price} {data.currency}
+        </p>
+        {data.reviews.length > 0 && <Comments reviews={data.reviews} />}
+        <StyledLink href="/">Back to all</StyledLink>
+        <StyledButton
+          type="submit"
+          onClick={() => {
+            setIsEditMode(!isEditMode);
+          }}
+        >
+          Edit
+        </StyledButton>
+        <StyledButton type="submit" onClick={() => handleDeleteProduct(id)}>
+          Delete
+        </StyledButton>
+
+        {isEditMode && <ProductForm onSubmit={handleEditProduct} />}
+      </ProductCard>
+    </>
   );
 }
