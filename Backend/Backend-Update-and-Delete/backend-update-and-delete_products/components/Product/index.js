@@ -33,6 +33,20 @@ export default function Product() {
     }
   }
 
+  async function handleDeleteProduct() {
+    const response = await fetch(`/api/products/${id}`, {
+      method: "DELETE",
+    });
+    // You are handing over the product identified by its id to our DELETE request method.
+    // This is the entire code required to do so.
+    if (response.ok) {
+      router.push("/");
+    } else {
+      console.error(`Error: ${response.status}`);
+    }
+    // After deleting the product, you route back to our index page.
+  }
+
   if (isLoading) {
     return <h1>Loading...</h1>;
   }
